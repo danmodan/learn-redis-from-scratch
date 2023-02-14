@@ -1,14 +1,14 @@
-package com.learnredisfromscratch.db;
+package com.learnredisfromscratch.repository.db;
 
 import redis.clients.jedis.JedisPool;
 
-class JedisPoolFactory {
+public class JedisPoolFactory {
 
     private JedisPoolFactory() {}
 
     private static JedisPool jedisPool;
 
-    static JedisPool getJedisPool() {
+    public static JedisPool getJedisPool() {
 
         if (jedisPool != null) {
             return jedisPool;

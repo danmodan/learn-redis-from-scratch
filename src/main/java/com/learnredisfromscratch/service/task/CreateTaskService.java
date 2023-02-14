@@ -1,7 +1,7 @@
 package com.learnredisfromscratch.service.task;
 
-import com.learnredisfromscratch.db.JediClient;
-import com.learnredisfromscratch.db.handler.CreateTaskHandler;
+import com.learnredisfromscratch.repository.db.JediClient;
+import com.learnredisfromscratch.repository.db.handler.CreateTaskHandler;
 
 public class CreateTaskService {
 

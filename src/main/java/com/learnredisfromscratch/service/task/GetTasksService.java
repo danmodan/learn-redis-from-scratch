@@ -3,8 +3,8 @@ package com.learnredisfromscratch.service.task;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.learnredisfromscratch.db.JediClient;
-import com.learnredisfromscratch.db.handler.GetAllTasksHandler;
+import com.learnredisfromscratch.repository.db.JediClient;
+import com.learnredisfromscratch.repository.db.handler.GetAllTasksHandler;
 
 public class GetTasksService {
 

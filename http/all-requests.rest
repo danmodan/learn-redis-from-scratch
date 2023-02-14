@@ -1,0 +1,36 @@
+GET http://localhost:8080/report
+
+# Bender
+# Fry
+# Leela
+# Professor Farnsworth
+# Amy
+# Zapp Brannigan
+# Lurr
+# Dr Zoidberg
+# Linda the reporter
+# Bob Barker
+# Hermes
+# Morgan Proctor
+# Mom
+# Robot Mob
+# Giant Bender
+# Kif
+# Don bot
+@futurama = https://futurama-api.fly.dev
+@count = 10
+@character = Bender
+
+GET {{futurama}}/api/quotes
+
+###
+
+GET {{futurama}}/api/quotes/{{count}}
+
+###
+
+GET {{futurama}}/api/characters/{{character}}
+
+###
+
+GET {{futurama}}/api/characters/{{character}}/{{count}}

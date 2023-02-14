@@ -1,7 +1,7 @@
 package com.learnredisfromscratch.service.task;
 
-import com.learnredisfromscratch.db.JediClient;
-import com.learnredisfromscratch.db.handler.RemoveTaskHandler;
+import com.learnredisfromscratch.repository.db.JediClient;
+import com.learnredisfromscratch.repository.db.handler.RemoveTaskHandler;
 
 public class RemoveTaskService {
 
