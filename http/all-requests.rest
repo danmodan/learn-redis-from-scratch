@@ -1,4 +1,4 @@
-GET http://localhost:8080/report
+GET http://localhost:8080/quote?character=Fry
 
 # Bender
 # Fry

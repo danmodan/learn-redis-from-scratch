@@ -19,6 +19,6 @@ public class QuotesCountReport implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
 
         String requestMethod = exchange.getRequestMethod();
-        System.out.println(exchange.getRequestURI().getPath());
+        
     }
 }

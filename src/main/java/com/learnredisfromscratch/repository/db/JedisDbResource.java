@@ -1,6 +1,5 @@
 package com.learnredisfromscratch.repository.db;
 
-import java.util.Collection;
 import java.util.List;
 
 import redis.clients.jedis.Jedis;
@@ -36,9 +35,18 @@ public class JedisDbResource implements DbResource {
     @Override
     public void addItens(String listName, String... itens) {
 
+        addItens(listName, 0, itens);
+    }
+
+    @Override
+    public void addItens(String listName, int seconds , String... itens) {
+
         try (Jedis jedis = jedisPool.getResource()) {
 
             jedis.rpush(listName, itens);
+            if(seconds > 0) {
+                jedis.expire(listName, seconds);
+            }
         }
     }
 }

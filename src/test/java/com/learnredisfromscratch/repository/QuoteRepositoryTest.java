@@ -43,7 +43,7 @@ public class QuoteRepositoryTest {
     @Test
     public void giver_character_than_return_all_quotes() {
 
-        var actual = quoteRepository.getAllQuotesByCharacter("Bender");
+        var actual = quoteRepository.getAllQuotes("Bender");
         var expected = db.get("Bender");
         
         assertTrue(actual.containsAll(expected));
@@ -52,7 +52,7 @@ public class QuoteRepositoryTest {
     @Test
     public void giver_character_than_return_quotes() {
 
-        var actual = quoteRepository.getQuotesByCharacter("Bender", 1, 6);
+        var actual = quoteRepository.getQuotes("Bender", 1, 6);
         var expected = db.get("Bender").subList(1, 7);
         
         assertTrue(actual.containsAll(expected));

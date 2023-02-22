@@ -1,5 +1,6 @@
 package com.learnredisfromscratch.repository.db;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -25,5 +26,18 @@ public class ListDbResource implements DbResource {
     public List<String> getAllList(String listName) {
 
         return Optional.ofNullable(db.get(listName)).orElseThrow();
+    }
+
+    @Override
+    public void addItens(String listName, String... itens) {
+
+        List<String> list = Optional.ofNullable(db.get(listName)).orElseThrow();
+        list.addAll(Arrays.asList(itens));
+    }
+
+    @Override
+    public void addItens(String listName, int expirationSeconds, String... itens) {
+        // TODO Auto-generated method stub
+        
     }
 }

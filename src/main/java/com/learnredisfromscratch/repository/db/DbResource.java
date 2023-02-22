@@ -9,4 +9,6 @@ public interface DbResource {
     List<String> getAllList(String listName);
 
     void addItens(String listName, String... itens);
+
+    void addItens(String listName, int expirationSeconds, String... itens);
 }
